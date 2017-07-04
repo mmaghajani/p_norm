@@ -19,6 +19,7 @@
     <Option Name="BoardPart" Val="xilinx.com:vc707:part0:1.2"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/myip_1.0"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/final_project.ip_user_files"/>
@@ -28,8 +29,46 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_myip_0_0/design_1_myip_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_lmb_bram_0/design_1_lmb_bram_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_microblaze_0_axi_periph_0/design_1_microblaze_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_mdm_1_0/design_1_mdm_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_xbar_0/design_1_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1.bmm"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.hwdef"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/TB.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/full_adder.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/full_adder.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -38,6 +77,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/half_adder.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/half_adder.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -46,6 +86,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/multiplier.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/multiplier.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -54,6 +95,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BinaryToBCD.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BinaryToBCD.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -62,6 +104,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD_multiplier.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD_multiplier.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -70,6 +113,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD_adder.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD_adder.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -78,6 +122,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD_1x8_multiplier.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD_1x8_multiplier.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -86,6 +131,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/N_digit_BCD_adder.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/N_digit_BCD_adder.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -94,6 +140,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD32ToBinary110.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD32ToBinary110.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -102,6 +149,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/Binary110ToBCD32.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/Binary110ToBCD32.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -110,6 +158,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCDtoBin.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCDtoBin.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -118,6 +167,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/new_BCD_divider.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/new_BCD_divider.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -126,6 +176,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD_8x8_multiplier.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD_8x8_multiplier.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -134,6 +185,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD_32x32_multiplier.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD_32x32_multiplier.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -142,6 +194,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD_power.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD_power.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -150,6 +203,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD_decrement.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD_decrement.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -158,6 +212,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD_32x32_divider.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD_32x32_divider.vhd"/>
           <Attr Name="ImportTime" Val="1498775301"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -166,6 +221,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/BCD_sqrt.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/BCD_sqrt.vhd"/>
           <Attr Name="ImportTime" Val="1499189457"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -174,6 +230,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Newfolde/p_norm.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="C:/Users/mma137421/Desktop/Newfolde/p_norm.vhd"/>
           <Attr Name="ImportTime" Val="1499185322"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -182,8 +239,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="p_norm"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="TB"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -193,11 +249,21 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/imports/Debug/test.elf">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSDKDIR/test/Debug/test.elf"/>
+          <Attr Name="ImportTime" Val="1499192585"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="ScopedToRef" Val="design_1"/>
+          <Attr Name="ScopedToCell" Val="microblaze_0"/>
+          <Attr Name="IsVisible" Val="1"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="p_norm"/>
+        <Option Name="TopModule" Val="TB"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
@@ -229,17 +295,13 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7vx485tffg1761-2" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7vx485tffg1761-2" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

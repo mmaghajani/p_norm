@@ -1,0 +1,902 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Tue Jul 04 22:44:22 2017
+# Process ID: 10368
+# Current directory: D:/Projects/HDL/xilinx/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11308 D:\Projects\HDL\xilinx\final_project\final_project.xpr
+# Log file: D:/Projects/HDL/xilinx/final_project/vivado.log
+# Journal file: D:/Projects/HDL/xilinx/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Projects/HDL/xilinx/final_project/final_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 769.797 ; gain = 125.797
+create_peripheral xilinx.com user myip 1.0 -dir D:/Projects/HDL/xilinx/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:myip:1.0]
+set_property VALUE 10 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core xilinx.com:user:myip:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design -force [ipx::find_open_core xilinx.com:user:myip:1.0]
+WARNING: [IP_Flow 19-627] AddressBlock Parameter 'OFFSET_BASE_PARAM': XPath expression failed: Undefined parameter "ADDRBLOCKPARAM_VALUE.S00_AXI_reg.OFFSET_BASE_PARAM" used in XPATH expression "ADDRBLOCKPARAM_VALUE.S00_AXI_reg.OFFSET_BASE_PARAM".
+WARNING: [IP_Flow 19-627] AddressBlock Parameter 'OFFSET_HIGH_PARAM': XPath expression failed: Undefined parameter "ADDRBLOCKPARAM_VALUE.S00_AXI_reg.OFFSET_HIGH_PARAM" used in XPATH expression "ADDRBLOCKPARAM_VALUE.S00_AXI_reg.OFFSET_HIGH_PARAM".
+write_peripheral [ipx::find_open_core xilinx.com:user:myip:1.0]
+set_property  ip_repo_paths  D:/Projects/HDL/xilinx/ip_repo/myip_1.0 [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Projects/HDL/xilinx/ip_repo/myip_1.0'.
+ipx::edit_ip_in_project -upgrade true -name edit_myip_v1_0 -directory D:/Projects/HDL/xilinx/ip_repo d:/Projects/HDL/xilinx/ip_repo/myip_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Projects/HDL/xilinx/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sim_1
+add_files -norecurse -copy_to D:/Projects/HDL/xilinx/ip_repo/myip_1.0/src {D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD_decrement.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/half_adder.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD_adder.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/full_adder.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD_32x32_multiplier.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD_1x8_multiplier.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/multiplier.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD32ToBinary110.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD_multiplier.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/new_BCD_divider.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/Binary110ToBCD32.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BinaryToBCD.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD_32x32_divider.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD_sqrt.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCDtoBin.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/N_digit_BCD_adder.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD_power.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/BCD_8x8_multiplier.vhd D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/Newfolde/p_norm.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/Projects/HDL/xilinx/ip_repo/myip_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/Projects/HDL/xilinx/ip_repo/myip_1.0'
+create_bd_design "design_1"
+Wrote  : <D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/design_1.bd> 
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:9.5 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config {local_mem "8KB" ecc "None" cache "None" debug_module "Debug & UART" axi_periph "Enabled" axi_intc "0" clk "New Clocking Wizard (100 MHz)" }  [get_bd_cells microblaze_0]
+apply_bd_automation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 919.602 ; gain = 59.605
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip:1.0 myip_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "sys_diff_clock ( System differential clock ) " }  [get_bd_intf_pins clk_wiz_1/CLK_IN1_D]
+INFO: [board_rule:/clk_wiz_1-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /clk_wiz_1]
+INFO: [board_rule:/clk_wiz_1-100] set_property CONFIG.CLK_IN1_BOARD_INTERFACE sys_diff_clock [get_bd_cells /clk_wiz_1]
+INFO: [board_rule:/clk_wiz_1-100] create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 sys_diff_clock
+INFO: [board_rule:/clk_wiz_1-100] set_property CONFIG.FREQ_HZ 100000000 /sys_diff_clock
+INFO: [board_rule:/clk_wiz_1-100] connect_bd_intf_net /sys_diff_clock /clk_wiz_1/CLK_IN1_D
+INFO: [board_rule:/clk_wiz_1-100] set_property CONFIG.FREQ_HZ 200000000 /sys_diff_clock
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "reset ( FPGA Reset ) " }  [get_bd_pins clk_wiz_1/reset]
+INFO: [board_rule:/clk_wiz_1-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /clk_wiz_1]
+INFO: [board_rule:/clk_wiz_1-100] create_bd_port -dir I reset -type rst
+INFO: [board_rule:/clk_wiz_1-100] set_property CONFIG.POLARITY  /reset
+INFO: [board_rule:/clk_wiz_1-100] connect_bd_net /reset /clk_wiz_1/reset
+INFO: [board_rule:/clk_wiz_1-100] set_property CONFIG.POLARITY ACTIVE_HIGH /reset
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "reset ( FPGA Reset ) " }  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+INFO: [board_rule:/rst_clk_wiz_1_100M-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /rst_clk_wiz_1_100M]
+INFO: [board_rule:/rst_clk_wiz_1_100M-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /rst_clk_wiz_1_100M]
+INFO: [board_rule:/rst_clk_wiz_1_100M-100] connect_bd_net /reset /rst_clk_wiz_1_100M/ext_reset_in
+INFO: [board_rule:/rst_clk_wiz_1_100M-100] set_property CONFIG.POLARITY ACTIVE_HIGH /reset
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" Clk "Auto" }  [get_bd_intf_pins myip_0/S00_AXI]
+</myip_0/S00_AXI/S00_AXI_reg> is being mapped into </microblaze_0/Data> at <0x44A00000 [ 64K ]>
+endgroup
+make_wrapper -files [get_files D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/design_1.bd] -top
+VHDL Output written to : D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+Wrote  : <D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/design_1.bd> 
+add_files -norecurse D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+update_compile_order -fileset sources_1
+set_property top design_1_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+set_property top design_1_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+generate_target all [get_files  D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_microblaze_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_microblaze_0_0'...
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_microblaze_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'design_1_microblaze_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_microblaze_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_dlmb_v10_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_dlmb_v10_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_dlmb_v10_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_dlmb_v10_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_ilmb_v10_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_ilmb_v10_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_ilmb_v10_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_ilmb_v10_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_dlmb_bram_if_cntlr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_dlmb_bram_if_cntlr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_dlmb_bram_if_cntlr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_dlmb_bram_if_cntlr_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_ilmb_bram_if_cntlr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_ilmb_bram_if_cntlr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_ilmb_bram_if_cntlr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_ilmb_bram_if_cntlr_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_lmb_bram_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_lmb_bram_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_lmb_bram_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'design_1_lmb_bram_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_lmb_bram_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_mdm_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_mdm_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_mdm_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_mdm_1_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_clk_wiz_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_clk_wiz_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_clk_wiz_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'design_1_clk_wiz_1_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_clk_wiz_1_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_rst_clk_wiz_1_100M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_rst_clk_wiz_1_100M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_rst_clk_wiz_1_100M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'design_1_rst_clk_wiz_1_100M_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_rst_clk_wiz_1_100M_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_myip_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_myip_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_myip_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Software Driver' target for IP 'design_1_myip_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myip_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'design_1_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'design_1_xbar_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'design_1_xbar_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+Exporting to file D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1305.352 ; gain = 285.270
+export_ip_user_files -of_objects [get_files D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/sim_scripts -force -quiet
+file mkdir D:/Projects/HDL/xilinx/final_project/final_project.sdk
+write_hwdef -force  -file D:/Projects/HDL/xilinx/final_project/final_project.sdk/design_1_wrapper.hdf
+launch_sdk -workspace D:/Projects/HDL/xilinx/final_project/final_project.sdk -hwspec D:/Projects/HDL/xilinx/final_project/final_project.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/Projects/HDL/xilinx/final_project/final_project.sdk -hwspec D:/Projects/HDL/xilinx/final_project/final_project.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse D:/Projects/HDL/xilinx/final_project/final_project.sdk/test/Debug/test.elf
+set_property SCOPED_TO_REF design_1 [get_files -all -of_objects [get_fileset sim_1] {D:/Projects/HDL/xilinx/final_project/final_project.srcs/sim_1/imports/Debug/test.elf}]
+set_property SCOPED_TO_CELLS { microblaze_0 } [get_files -all -of_objects [get_fileset sim_1] {D:/Projects/HDL/xilinx/final_project/final_project.srcs/sim_1/imports/Debug/test.elf}]
+file mkdir D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new
+close [ open D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/TB.vhd w ]
+add_files D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/TB.vhd
+update_compile_order -fileset sources_1
+set_property top TB [current_fileset]
+update_compile_order -fileset sources_1
+set_property top TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Generating merged BMM file for the design top 'TB'...
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-96] Design contains embedded sources, generating MEM files for simulation...
+Generating merged BMM file for the design top 'TB'...
+INFO: [USF-XSim-37] Inspecting design source files for 'TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'D:/Projects/HDL/xilinx/final_project/final_project.sim/sim_1/behav'
+"xvlog -m64 --relax -prj TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_1_0_clk_wiz
+INFO: [VRFC 10-2458] undeclared symbol clk_in1_design_1_clk_wiz_1_0, assumed default net type wire [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_clk_wiz.v:81]
+INFO: [VRFC 10-2458] undeclared symbol clk_out1_design_1_clk_wiz_1_0, assumed default net type wire [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_clk_wiz.v:133]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_carry_and.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry_and
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_carry_latch_and.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry_latch_and
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_carry_latch_or.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry_latch_or
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_carry_or.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry_or
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_carry.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_command_fifo.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_command_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_mask_static.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_mask_static
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_mask.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_mask
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_sel_mask_static.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_sel_mask_static
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_sel_mask.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_sel_mask
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_sel_static.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_sel_static
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_sel.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_static
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_mux_enc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_nto1_mux.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_nto1_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v" into library axi_infrastructure_v1_1_0
+INFO: [VRFC 10-311] analyzing module axi_infrastructure_v1_1_0_axi2vector
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axic_srl_fifo.v" into library axi_infrastructure_v1_1_0
+INFO: [VRFC 10-311] analyzing module axi_infrastructure_v1_1_0_axic_srl_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v" into library axi_infrastructure_v1_1_0
+INFO: [VRFC 10-311] analyzing module axi_infrastructure_v1_1_0_vector2axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v" into library axi_register_slice_v2_1_7
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_7_axic_register_slice
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v" into library axi_register_slice_v2_1_7
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_7_axi_register_slice
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_data_fifo_v2_1/hdl/verilog/axi_data_fifo_v2_1_axic_fifo.v" into library axi_data_fifo_v2_1_6
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_6_axic_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_data_fifo_v2_1/hdl/verilog/axi_data_fifo_v2_1_fifo_gen.v" into library axi_data_fifo_v2_1_6
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_6_fifo_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_data_fifo_v2_1/hdl/verilog/axi_data_fifo_v2_1_axic_srl_fifo.v" into library axi_data_fifo_v2_1_6
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_6_axic_srl_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_data_fifo_v2_1/hdl/verilog/axi_data_fifo_v2_1_axic_reg_srl_fifo.v" into library axi_data_fifo_v2_1_6
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_6_axic_reg_srl_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_data_fifo_v2_1/hdl/verilog/axi_data_fifo_v2_1_ndeep_srl.v" into library axi_data_fifo_v2_1_6
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_6_ndeep_srl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_data_fifo_v2_1/hdl/verilog/axi_data_fifo_v2_1_axi_data_fifo.v" into library axi_data_fifo_v2_1_6
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_6_axi_data_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_arbiter_sasd.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_addr_arbiter_sasd
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_arbiter.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_addr_arbiter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_decoder.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_addr_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_arbiter_resp.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_arbiter_resp
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_crossbar_sasd.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_crossbar_sasd
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_crossbar.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_crossbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_decerr_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_si_transactor.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_si_transactor
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_splitter.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_splitter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_wdata_mux.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_wdata_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_wdata_router.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_wdata_router
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v" into library axi_crossbar_v2_1_8
+INFO: [VRFC 10-311] analyzing module axi_crossbar_v2_1_8_axi_crossbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Projects/HDL/xilinx/final_project/final_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl -m64 --relax -prj TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/microblaze_v9_5/hdl/microblaze_v9_5_vh_rfs.vhd" into library microblaze_v9_5_3
+INFO: [VRFC 10-307] analyzing entity MB_SRL16E
+INFO: [VRFC 10-307] analyzing entity MB_SRLC16E
+INFO: [VRFC 10-307] analyzing entity MB_LUT1
+INFO: [VRFC 10-307] analyzing entity MB_LUT2
+INFO: [VRFC 10-307] analyzing entity MB_LUT3
+INFO: [VRFC 10-307] analyzing entity MB_LUT4
+INFO: [VRFC 10-307] analyzing entity MB_LUT5
+INFO: [VRFC 10-307] analyzing entity MB_LUT6
+INFO: [VRFC 10-307] analyzing entity MB_LUT6_2
+INFO: [VRFC 10-307] analyzing entity MB_MUXCY
+INFO: [VRFC 10-307] analyzing entity MB_XORCY
+INFO: [VRFC 10-307] analyzing entity MB_AND2B1L
+INFO: [VRFC 10-307] analyzing entity MB_OR2L
+INFO: [VRFC 10-307] analyzing entity MB_MUXF7
+INFO: [VRFC 10-307] analyzing entity MB_MUXF8
+INFO: [VRFC 10-307] analyzing entity MB_MUXF9
+INFO: [VRFC 10-307] analyzing entity MB_RAM32M
+INFO: [VRFC 10-307] analyzing entity MB_RAM16X1D
+INFO: [VRFC 10-307] analyzing entity MB_RAM32X1D
+INFO: [VRFC 10-307] analyzing entity MB_MULT18X18S
+INFO: [VRFC 10-307] analyzing entity MB_FD
+INFO: [VRFC 10-307] analyzing entity MB_FDR
+INFO: [VRFC 10-307] analyzing entity MB_FDRE
+INFO: [VRFC 10-307] analyzing entity MB_FDE
+INFO: [VRFC 10-307] analyzing entity MB_FDSE
+INFO: [VRFC 10-307] analyzing entity MB_FDS
+INFO: [VRFC 10-307] analyzing entity MB_FDRSE
+INFO: [VRFC 10-307] analyzing entity MB_MULT_AND
+INFO: [VRFC 10-307] analyzing entity MB_RAMB36
+INFO: [VRFC 10-307] analyzing entity MB_MUXCY_XORCY
+INFO: [VRFC 10-307] analyzing entity mb_sync_bit
+INFO: [VRFC 10-307] analyzing entity mb_sync_vec
+INFO: [VRFC 10-307] analyzing entity mux_bus
+INFO: [VRFC 10-307] analyzing entity Parity_Recursive_LUT6
+INFO: [VRFC 10-307] analyzing entity Parity
+INFO: [VRFC 10-307] analyzing entity comparator
+INFO: [VRFC 10-307] analyzing entity carry_and
+INFO: [VRFC 10-307] analyzing entity carry_or
+INFO: [VRFC 10-307] analyzing entity carry_equal
+INFO: [VRFC 10-307] analyzing entity carry_compare
+INFO: [VRFC 10-307] analyzing entity carry_compare_mask
+INFO: [VRFC 10-307] analyzing entity carry_compare_const
+INFO: [VRFC 10-307] analyzing entity Carry_Compare_GE
+INFO: [VRFC 10-307] analyzing entity find_first_bit
+INFO: [VRFC 10-307] analyzing entity mux4_8
+INFO: [VRFC 10-307] analyzing entity mux4
+INFO: [VRFC 10-307] analyzing entity vec_mux
+INFO: [VRFC 10-307] analyzing entity srl_fifo
+INFO: [VRFC 10-307] analyzing entity ALU_Bit
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-307] analyzing entity MSR_Reg_Bit
+INFO: [VRFC 10-307] analyzing entity MSR_Reg
+INFO: [VRFC 10-307] analyzing entity msr_reg_gti
+INFO: [VRFC 10-307] analyzing entity dsp_module
+INFO: [VRFC 10-307] analyzing entity mul_unit
+INFO: [VRFC 10-307] analyzing entity Div_unit
+INFO: [VRFC 10-307] analyzing entity Div_unit_gti
+INFO: [VRFC 10-307] analyzing entity Operand_Select_Bit
+INFO: [VRFC 10-307] analyzing entity Operand_Select
+INFO: [VRFC 10-307] analyzing entity Operand_Select_gti
+INFO: [VRFC 10-307] analyzing entity PC_Bit
+INFO: [VRFC 10-307] analyzing entity PC_Module
+INFO: [VRFC 10-307] analyzing entity PC_Module_gti
+INFO: [VRFC 10-307] analyzing entity PreFetch_Buffer
+INFO: [VRFC 10-307] analyzing entity PreFetch_Buffer_gti
+INFO: [VRFC 10-307] analyzing entity Register_File_Bit
+INFO: [VRFC 10-307] analyzing entity Register_File
+INFO: [VRFC 10-307] analyzing entity Register_File_gti
+INFO: [VRFC 10-307] analyzing entity count_leading_zeros
+INFO: [VRFC 10-307] analyzing entity Shift_Logic_Bit
+INFO: [VRFC 10-307] analyzing entity Shift_Logic_Module
+INFO: [VRFC 10-307] analyzing entity Shift_Logic_Module_gti
+INFO: [VRFC 10-307] analyzing entity Zero_Detect
+INFO: [VRFC 10-307] analyzing entity Zero_Detect_gti
+INFO: [VRFC 10-307] analyzing entity barrel_shift
+INFO: [VRFC 10-307] analyzing entity Barrel_Shifter_gti
+INFO: [VRFC 10-307] analyzing entity WB_Mux_Bit
+INFO: [VRFC 10-307] analyzing entity WB_Mux
+INFO: [VRFC 10-307] analyzing entity Data_Read_Steering
+INFO: [VRFC 10-307] analyzing entity Byte_Doublet_Handle
+INFO: [VRFC 10-307] analyzing entity Byte_Doublet_Handle_gti
+INFO: [VRFC 10-307] analyzing entity Data_Flow_Logic
+INFO: [VRFC 10-307] analyzing entity Streaming_AXI
+INFO: [VRFC 10-307] analyzing entity exception_registers
+INFO: [VRFC 10-307] analyzing entity exception_registers_gti
+INFO: [VRFC 10-307] analyzing entity FPU_ADDSUB
+INFO: [VRFC 10-307] analyzing entity FPU_DIV
+INFO: [VRFC 10-307] analyzing entity FPU_MUL
+INFO: [VRFC 10-307] analyzing entity fpu_conv
+INFO: [VRFC 10-307] analyzing entity fpu_sqrt
+INFO: [VRFC 10-307] analyzing entity Fpu
+INFO: [VRFC 10-307] analyzing entity PVR
+INFO: [VRFC 10-307] analyzing entity Result_Mux_Bit
+INFO: [VRFC 10-307] analyzing entity Result_Mux
+INFO: [VRFC 10-307] analyzing entity stack_protection
+INFO: [VRFC 10-307] analyzing entity Data_Flow
+INFO: [VRFC 10-307] analyzing entity Data_Flow_gti
+INFO: [VRFC 10-307] analyzing entity jump_logic
+INFO: [VRFC 10-307] analyzing entity Decode
+INFO: [VRFC 10-307] analyzing entity Decode_gti
+INFO: [VRFC 10-307] analyzing entity address_hit
+INFO: [VRFC 10-307] analyzing entity address_data_hit
+INFO: [VRFC 10-307] analyzing entity Debug
+INFO: [VRFC 10-307] analyzing entity Debug_Profile
+INFO: [VRFC 10-307] analyzing entity debug_stat_counter
+INFO: [VRFC 10-307] analyzing entity Debug_Stat
+INFO: [VRFC 10-307] analyzing entity Debug_Trace
+INFO: [VRFC 10-307] analyzing entity DAXI_interface
+INFO: [VRFC 10-307] analyzing entity IAXI_Interface
+INFO: [VRFC 10-307] analyzing entity RAM_Module
+INFO: [VRFC 10-307] analyzing entity LRU_Module
+INFO: [VRFC 10-307] analyzing entity victim_cache
+INFO: [VRFC 10-307] analyzing entity stream_cache
+INFO: [VRFC 10-307] analyzing entity Cache_Interface
+INFO: [VRFC 10-307] analyzing entity Icache
+INFO: [VRFC 10-307] analyzing entity DCache
+INFO: [VRFC 10-307] analyzing entity DCache_gti
+INFO: [VRFC 10-307] analyzing entity cache_valid_bit_detect
+INFO: [VRFC 10-307] analyzing entity cachehit_detect
+INFO: [VRFC 10-307] analyzing entity DCache_wb
+INFO: [VRFC 10-307] analyzing entity instr_mux
+INFO: [VRFC 10-307] analyzing entity read_data_mux
+INFO: [VRFC 10-307] analyzing entity interrupt_mode_converter
+INFO: [VRFC 10-307] analyzing entity MMU_TLB
+INFO: [VRFC 10-307] analyzing entity MMU_UTLB_RAM
+INFO: [VRFC 10-307] analyzing entity MMU_UTLB
+INFO: [VRFC 10-307] analyzing entity MMU
+INFO: [VRFC 10-307] analyzing entity MicroBlaze_Area
+INFO: [VRFC 10-307] analyzing entity MicroBlaze_GTi
+INFO: [VRFC 10-307] analyzing entity MicroBlaze_Core
+INFO: [VRFC 10-307] analyzing entity MicroBlaze
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_microblaze_0_0/sim/design_1_microblaze_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_microblaze_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_v10_v3_0/hdl/vhdl/lmb_v10.vhd" into library lmb_v10_v3_0_7
+INFO: [VRFC 10-307] analyzing entity lmb_v10
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_dlmb_v10_0/sim/design_1_dlmb_v10_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_dlmb_v10_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_ilmb_v10_0/sim/design_1_ilmb_v10_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_ilmb_v10_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_bram_if_funcs.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_bram_if_primitives.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity MB_LUT6
+INFO: [VRFC 10-307] analyzing entity MB_MUXCY
+INFO: [VRFC 10-307] analyzing entity MB_XORCY
+INFO: [VRFC 10-307] analyzing entity MB_MUXF7
+INFO: [VRFC 10-307] analyzing entity MB_MUXF8
+INFO: [VRFC 10-307] analyzing entity MB_FDRE
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/xor18.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity XOR18
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/parity.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity Parity
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/parityenable.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity ParityEnable
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/checkbit_handler.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity checkbit_handler
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/correct_one_bit.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity Correct_One_Bit
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/pselect.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity pselect
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/pselect_mask.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity pselect_mask
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/axi_interface.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity axi_interface
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_mux.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity lmb_mux
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_bram_if_cntlr.vhd" into library lmb_bram_if_cntlr_v4_0_7
+INFO: [VRFC 10-307] analyzing entity lmb_bram_if_cntlr
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/sim/design_1_dlmb_bram_if_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_dlmb_bram_if_cntlr_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/sim/design_1_ilmb_bram_if_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_ilmb_bram_if_cntlr_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.vhd" into library blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_write_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity write_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_axi_read_wrapper_beh
+INFO: [VRFC 10-307] analyzing entity read_netlist
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_output_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_softecc_output_reg_stage
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1_mem_module
+INFO: [VRFC 10-307] analyzing entity blk_mem_gen_v8_3_1
+INFO: [VRFC 10-307] analyzing entity beh_ff_clr
+INFO: [VRFC 10-307] analyzing entity beh_ff_ce
+INFO: [VRFC 10-307] analyzing entity beh_ff_pre
+INFO: [VRFC 10-307] analyzing entity beh_muxf7
+INFO: [VRFC 10-307] analyzing entity STATE_LOGIC
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_lmb_bram_0/sim/design_1_lmb_bram_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_lmb_bram_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/ipif_pkg.vhd" into library axi_lite_ipif_v3_0_3
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd" into library axi_lite_ipif_v3_0_3
+INFO: [VRFC 10-307] analyzing entity pselect_f
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/address_decoder.vhd" into library axi_lite_ipif_v3_0_3
+INFO: [VRFC 10-307] analyzing entity address_decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/slave_attachment.vhd" into library axi_lite_ipif_v3_0_3
+INFO: [VRFC 10-307] analyzing entity slave_attachment
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/axi_lite_ipif_v3_0/hdl/src/vhdl/axi_lite_ipif.vhd" into library axi_lite_ipif_v3_0_3
+INFO: [VRFC 10-307] analyzing entity axi_lite_ipif
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/mdm_v3_2/hdl/vhdl/mdm_primitives.vhd" into library mdm_v3_2_4
+INFO: [VRFC 10-307] analyzing entity carry_and
+INFO: [VRFC 10-307] analyzing entity carry_or_vec
+INFO: [VRFC 10-307] analyzing entity carry_or
+INFO: [VRFC 10-307] analyzing entity select_bit
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/mdm_v3_2/hdl/vhdl/arbiter.vhd" into library mdm_v3_2_4
+INFO: [VRFC 10-307] analyzing entity Arbiter
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/mdm_v3_2/hdl/vhdl/srl_fifo.vhd" into library mdm_v3_2_4
+INFO: [VRFC 10-307] analyzing entity SRL_FIFO
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/mdm_v3_2/hdl/vhdl/bus_master.vhd" into library mdm_v3_2_4
+INFO: [VRFC 10-307] analyzing entity bus_master
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/mdm_v3_2/hdl/vhdl/jtag_control.vhd" into library mdm_v3_2_4
+INFO: [VRFC 10-307] analyzing entity JTAG_CONTROL
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/mdm_v3_2/hdl/vhdl/mdm_core.vhd" into library mdm_v3_2_4
+INFO: [VRFC 10-307] analyzing entity MDM_Core
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/mdm_v3_2/hdl/vhdl/mdm.vhd" into library mdm_v3_2_4
+INFO: [VRFC 10-307] analyzing entity MDM
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_mdm_1_0/sim/design_1_mdm_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_mdm_1_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd" into library lib_cdc_v1_0_2
+INFO: [VRFC 10-307] analyzing entity cdc_sync
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/proc_sys_reset_v5_0/hdl/src/vhdl/upcnt_n.vhd" into library proc_sys_reset_v5_0_8
+INFO: [VRFC 10-307] analyzing entity upcnt_n
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd" into library proc_sys_reset_v5_0_8
+INFO: [VRFC 10-307] analyzing entity sequence_psr
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd" into library proc_sys_reset_v5_0_8
+INFO: [VRFC 10-307] analyzing entity lpf
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd" into library proc_sys_reset_v5_0_8
+INFO: [VRFC 10-307] analyzing entity proc_sys_reset
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/sim/design_1_rst_clk_wiz_1_100M_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_rst_clk_wiz_1_100M_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity full_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity multiplier
+WARNING: [VRFC 10-280] actual for formal port a is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/multiplier.vhd:51]
+WARNING: [VRFC 10-280] actual for formal port a is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/multiplier.vhd:52]
+WARNING: [VRFC 10-280] actual for formal port a is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/multiplier.vhd:53]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/half_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity half_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BinaryToBCD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BinaryToBCD
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_multiplier
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/N_digit_BCD_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity N_digit_BCD_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_1x8_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_1x8_multiplier
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_1x8_multiplier.vhd:86]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/new_BCD_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity new_divider
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/Binary110ToBCD32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Binary110ToBCD32
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_8x8_multiplier
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:210]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:212]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:214]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:216]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:219]
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:220]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:221]
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:222]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:224]
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_8x8_multiplier.vhd:225]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCDtoBin.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCDtoBin
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD32ToBinary110.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD32ToBinary110
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_power.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_power
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_decrement.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_decrement
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_32x32_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_32x8_multiplier
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_32x32_multiplier.vhd:99]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_32x32_multiplier.vhd:102]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_32x32_multiplier.vhd:105]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_32x32_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_32x32_divider
+WARNING: [VRFC 10-280] actual for formal port number is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_32x32_divider.vhd:81]
+WARNING: [VRFC 10-280] actual for formal port number is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_32x32_divider.vhd:82]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/BCD_sqrt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_sqrt
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/src/p_norm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity p_norm
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/hdl/myip_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity myip_v1_0_S00_AXI
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ipshared/xilinx.com/myip_v1_0/hdl/myip_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity myip_v1_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/ip/design_1_myip_0_0/sim/design_1_myip_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_myip_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/fifo_generator_v13_0/simulation/fifo_generator_vhdl_beh.vhd" into library fifo_generator_v13_0_1
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_bhv_as
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_bhv_ss
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_bhv_preload0
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_conv
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_axic_reg_slice
+INFO: [VRFC 10-307] analyzing entity fifo_generator_vhdl_beh
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/fifo_generator_v13_0/hdl/fifo_generator_v13_0_rfs.vhd" into library fifo_generator_v13_0_1
+INFO: [VRFC 10-307] analyzing entity input_blk
+INFO: [VRFC 10-307] analyzing entity output_blk
+INFO: [VRFC 10-307] analyzing entity shft_wrapper
+INFO: [VRFC 10-307] analyzing entity shft_ram
+INFO: [VRFC 10-307] analyzing entity wr_pf_as
+INFO: [VRFC 10-307] analyzing entity wr_pf_ss
+INFO: [VRFC 10-307] analyzing entity rd_pe_as
+INFO: [VRFC 10-307] analyzing entity rd_pe_ss
+INFO: [VRFC 10-307] analyzing entity synchronizer_ff
+INFO: [VRFC 10-307] analyzing entity delay
+INFO: [VRFC 10-307] analyzing entity bin_cntr
+INFO: [VRFC 10-307] analyzing entity clk_x_pntrs_builtin
+INFO: [VRFC 10-307] analyzing entity logic_builtin
+INFO: [VRFC 10-307] analyzing entity builtin_prim
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth
+INFO: [VRFC 10-307] analyzing entity builtin_top
+INFO: [VRFC 10-307] analyzing entity reset_builtin
+INFO: [VRFC 10-307] analyzing entity builtin_prim_v6
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth_v6
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth_low_latency
+INFO: [VRFC 10-307] analyzing entity builtin_top_v6
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_builtin
+INFO: [VRFC 10-307] analyzing entity bram_sync_reg
+INFO: [VRFC 10-307] analyzing entity bram_fifo_rstlogic
+INFO: [VRFC 10-307] analyzing entity reset_blk_ramfifo
+INFO: [VRFC 10-307] analyzing entity axi_reg_slice
+INFO: [VRFC 10-307] analyzing entity fifo_generator_top
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_synth
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/bd/design_1/hdl/design_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity m00_couplers_imp_8RVYHO
+INFO: [VRFC 10-307] analyzing entity m01_couplers_imp_1UTB3Y5
+INFO: [VRFC 10-307] analyzing entity microblaze_0_local_memory_imp_1K0VQXK
+INFO: [VRFC 10-307] analyzing entity s00_couplers_imp_1RZP34U
+INFO: [VRFC 10-307] analyzing entity design_1_microblaze_0_axi_periph_0
+INFO: [VRFC 10-307] analyzing entity design_1
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:20 . Memory (MB): peak = 1321.270 ; gain = 0.000
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Projects/HDL/xilinx/final_project/final_project.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.4/bin/unwrapped/win64.o/xelab.exe -wto 56d1b42b98f241a28f88c63b0d49da65 --debug typical --relax --mt 2 -L microblaze_v9_5_3 -L xil_defaultlib -L lmb_v10_v3_0_7 -L lmb_bram_if_cntlr_v4_0_7 -L blk_mem_gen_v8_3_1 -L axi_lite_ipif_v3_0_3 -L mdm_v3_2_4 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_8 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_7 -L fifo_generator_v13_0_1 -L axi_data_fifo_v2_1_6 -L axi_crossbar_v2_1_8 -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_behav xil_defaultlib.TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package unisim.vcomponents
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package axi_lite_ipif_v3_0_3.ipif_pkg
+Compiling package std.textio
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package microblaze_v9_5_3.microblaze_types
+Compiling package microblaze_v9_5_3.microblaze_isa
+Compiling package microblaze_v9_5_3.mmu_types
+Compiling package lmb_bram_if_cntlr_v4_0_7.lmb_bram_if_funcs
+Compiling package ieee.std_logic_textio
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.IBUFDS
+Compiling module unisims_ver.MMCME2_ADV(CLKIN1_PERIOD=5.0,CLK...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.design_1_clk_wiz_1_0_clk_wiz
+Compiling module xil_defaultlib.design_1_clk_wiz_1_0
+Compiling architecture bscane2_v of entity unisim.BSCANE2 [\BSCANE2("FALSE",2)(1,5)\]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_3.pselect_f [\pselect_f(2,2,"00","nofamily")(...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_3.pselect_f [\pselect_f(2,2,"01","nofamily")(...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_3.pselect_f [\pselect_f(2,2,"10","nofamily")(...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_3.pselect_f [\pselect_f(2,2,"11","nofamily")(...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_3.address_decoder [\address_decoder(4,"000000000000...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_3.slave_attachment [\slave_attachment(("000000000000...]
+Compiling architecture imp of entity axi_lite_ipif_v3_0_3.axi_lite_ipif [\axi_lite_ipif(32,32,"0000000000...]
+Compiling architecture fdre_v of entity unisim.FDRE [\FDRE('0','0','0','0')\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4("0000000000000010")(0,15)\]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0000000101100111",'0')(...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0100001010100111",'0')(...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0100010001000011",'0')(...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0101100001001101",'0')(...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4("1111111111001010")(0,15)\]
+Compiling architecture fdrse_v of entity unisim.FDRSE [\FDRSE('0','0','0','0','0','0')\]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture muxcy_l_v of entity unisim.MUXCY_L [muxcy_l_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0000000000000000",'0')(...]
+Compiling architecture imp of entity mdm_v3_2_4.SRL_FIFO [\SRL_FIFO(8,16)\]
+Compiling architecture fdce_v of entity unisim.FDCE [\FDCE('0','0','0','0')\]
+Compiling architecture fdc_1_v of entity unisim.FDC_1 [\FDC_1('0')\]
+Compiling architecture fdre_1_v of entity unisim.FDRE_1 [\FDRE_1('0')\]
+Compiling architecture imp of entity mdm_v3_2_4.JTAG_CONTROL [\JTAG_CONTROL(1,0,0,0,32,32,0,1,...]
+Compiling architecture imp of entity mdm_v3_2_4.MDM_Core [\MDM_Core(2,0,0,"111111111111111...]
+Compiling architecture imp of entity mdm_v3_2_4.MDM [\MDM("virtex7",2,0,0,2,"11111111...]
+Compiling architecture design_1_mdm_1_0_arch of entity xil_defaultlib.design_1_mdm_1_0 [design_1_mdm_1_0_default]
+Compiling architecture imp of entity microblaze_v9_5_3.DAXI_interface [\DAXI_interface(1,32,32,false,fa...]
+Compiling architecture and2b1l_v of entity unisim.AND2B1L [\AND2B1L('0')\]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_AND2B1L [\MB_AND2B1L(virtex7,'0')\]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("1111111111111111",'0')(...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_SRL16E [\MB_SRL16E("yes",true,"111111111...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0011111111111111",'0')(...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_SRL16E [\MB_SRL16E("yes",true,"001111111...]
+Compiling architecture srlc16e_v of entity unisim.SRLC16E [\SRLC16E("0000000000000000",'0')...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_SRLC16E [\MB_SRLC16E("yes","0000000000000...]
+Compiling architecture imp of entity microblaze_v9_5_3.address_hit [\address_hit(virtex7,true,false,...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0000000000011011",'0')(...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_SRL16E [\MB_SRL16E("yes",true,"000000000...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0000000000000000",'0')(...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_SRL16E [\MB_SRL16E("yes",true,"000000000...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0000000001100100",'0')(...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_SRL16E [\MB_SRL16E("yes",true,"000000000...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0010001000000000",'0')(...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_SRL16E [\MB_SRL16E("yes",true,"001000100...]
+Compiling architecture imp of entity microblaze_v9_5_3.mb_sync_bit [\mb_sync_bit(1,'0',false,true)\]
+Compiling architecture imp of entity microblaze_v9_5_3.mb_sync_vec [\mb_sync_vec(1,'0',false,true,16...]
+Compiling architecture imp of entity microblaze_v9_5_3.mb_sync_vec [\mb_sync_vec(2,'0',true,true,9)\]
+Compiling architecture imp of entity microblaze_v9_5_3.mb_sync_bit [\mb_sync_bit(1,'0',true,true)\]
+Compiling architecture imp of entity microblaze_v9_5_3.Debug [\Debug("000000000000000000000000...]
+Compiling architecture imp of entity microblaze_v9_5_3.interrupt_mode_converter [\interrupt_mode_converter(false,...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6("1001000000001001000000000...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(virtex7,"10010000000010...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6("1001000000001001000000000...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(virtex7,"10010000000010...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_FDRE [\MB_FDRE(virtex7,'0')\]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_MUXCY_XORCY [\MB_MUXCY_XORCY(virtex7)\]
+Compiling architecture muxf7_v of entity unisim.MUXF7 [muxf7_default]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_MUXF7 [\MB_MUXF7(virtex7)\]
+Compiling architecture fdr_v of entity unisim.FDR [\FDR('0')\]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_FDR [\MB_FDR(virtex7,'0')\]
+Compiling architecture imp of entity microblaze_v9_5_3.PC_Module_gti [\PC_Module_gti(virtex7,true,0,fa...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6("0000000000000000000000000...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(virtex7,"00000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6("0000000000000000111111111...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(virtex7,"00000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6("1111111100000000111111111...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(virtex7,"11111111000000...]
+Compiling architecture fdse_v of entity unisim.FDSE [\FDSE('1','0','0','0')\]
+Compiling architecture fds_v of entity unisim.FDS [\FDS('1')\]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_FDS [\MB_FDS(virtex7,'1')\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6("0000000011111111000000000...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(virtex7,"00000000111111...]
+Compiling architecture imp of entity microblaze_v9_5_3.PreFetch_Buffer_gti [\PreFetch_Buffer_gti(true,virtex...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_MUXCY [\MB_MUXCY(virtex7)\]
+Compiling architecture imp of entity microblaze_v9_5_3.carry_and [\carry_and(virtex7)\]
+Compiling architecture imp of entity microblaze_v9_5_3.jump_logic [\jump_logic(virtex7)\]
+Compiling architecture imp of entity microblaze_v9_5_3.carry_or [\carry_or(virtex7)\]
+Compiling architecture imp of entity microblaze_v9_5_3.Decode_gti [\Decode_gti(virtex7,true,"000000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2("00000000111111110000000...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6_2 [\MB_LUT6_2(virtex7,"000000001111...]
+Compiling architecture ram32m_v of entity unisim.RAM32M [\RAM32M("00000000000000000000000...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_RAM32M [\MB_RAM32M(virtex7,"yes","000000...]
+Compiling architecture imp of entity microblaze_v9_5_3.Register_File_gti [\Register_File_gti(virtex7,"yes"...]
+Compiling architecture imp of entity microblaze_v9_5_3.Operand_Select_gti [\Operand_Select_gti(true,virtex7...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2("01100000011110101010011...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6_2 [\MB_LUT6_2(virtex7,"011000000111...]
+Compiling architecture imp of entity microblaze_v9_5_3.ALU_Bit [\ALU_Bit(virtex7,true,false)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6("0110000001111010101001100...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(virtex7,"01100000011110...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4("1111101000001010")(0,15)\]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT4 [\MB_LUT4(virtex7,"11111010000010...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2("1000")(0,3)\]
+Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_MULT_AND [\MB_MULT_AND(virtex7,'0')\]
+Compiling architecture imp of entity microblaze_v9_5_3.ALU_Bit [\ALU_Bit(virtex7,true,true)\]
+Compiling architecture imp of entity microblaze_v9_5_3.ALU [\ALU(0,true,virtex7)\]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(rtl,"110010101010101011...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(rtl,"110010101010111111...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6 [\MB_LUT6(rtl,"110010101111111111...]
+Compiling architecture imp of entity microblaze_v9_5_3.Shift_Logic_Module_gti [\Shift_Logic_Module_gti(false,tr...]
+Compiling architecture imp of entity microblaze_v9_5_3.mul_unit [\mul_unit(virtex7,false,false)\]
+Compiling architecture imp of entity microblaze_v9_5_3.Barrel_Shifter_gti [\Barrel_Shifter_gti(virtex7,true...]
+Compiling architecture imp of entity microblaze_v9_5_3.WB_Mux_Bit [\WB_Mux_Bit(virtex7,6,2)\]
+Compiling architecture imp of entity microblaze_v9_5_3.WB_Mux [\WB_Mux(virtex7,false,false,fals...]
+Compiling architecture imp of entity microblaze_v9_5_3.Zero_Detect_gti [\Zero_Detect_gti(virtex7)\]
+Compiling architecture imp of entity microblaze_v9_5_3.Byte_Doublet_Handle_gti [\Byte_Doublet_Handle_gti(virtex7...]
+Compiling architecture imp of entity microblaze_v9_5_3.Data_Flow_Logic [\Data_Flow_Logic(virtex7,0,16)\]
+Compiling architecture msr_reg of entity microblaze_v9_5_3.msr_reg_gti [\msr_reg_gti(virtex7,"0000000000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2("11111111000000001111000...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6_2 [\MB_LUT6_2(virtex7,"111111110000...]
+Compiling architecture imp of entity microblaze_v9_5_3.mux_bus [\mux_bus(virtex7,true,32)\]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2("10010110100101101001011...]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_LUT6_2 [\MB_LUT6_2(virtex7,"100101101001...]
+Compiling architecture fde_v of entity unisim.FDE [\FDE('0')\]
+Compiling architecture imp of entity microblaze_v9_5_3.MB_FDE [\MB_FDE(virtex7,'0')\]
+Compiling architecture imp of entity microblaze_v9_5_3.exception_registers_gti [\exception_registers_gti(virtex7...]
+Compiling architecture imp of entity microblaze_v9_5_3.Fpu [\Fpu(virtex7,0,0,"yes")(1,3)\]
+Compiling architecture imp of entity microblaze_v9_5_3.PVR [\PVR(0,"00100010","00000000",0,1...]
+Compiling architecture imp of entity microblaze_v9_5_3.Data_Flow_gti [\Data_Flow_gti(32,virtex7,true,0...]
+Compiling architecture imp of entity microblaze_v9_5_3.read_data_mux [\read_data_mux(true,true,false)\]
+Compiling architecture imp of entity microblaze_v9_5_3.instr_mux [\instr_mux(virtex7,true,false,fa...]
+Compiling architecture imp of entity microblaze_v9_5_3.MMU [\MMU(virtex7,true,0,0,4,2,false,...]
+Compiling architecture imp of entity microblaze_v9_5_3.MicroBlaze_GTi [\MicroBlaze_GTi(2,1,2,1,0,0,0,1,...]
+Compiling architecture imp of entity microblaze_v9_5_3.mb_sync_bit [\mb_sync_bit(2,'0',true,true)\]
+Compiling architecture imp of entity microblaze_v9_5_3.MicroBlaze_Core [\MicroBlaze_Core(0,100000000,0,2...]
+Compiling architecture imp of entity microblaze_v9_5_3.MicroBlaze [\MicroBlaze(0,100000000,0,2,1,2,...]
+Compiling architecture design_1_microblaze_0_0_arch of entity xil_defaultlib.design_1_microblaze_0_0 [design_1_microblaze_0_0_default]
+Compiling architecture structure of entity xil_defaultlib.m00_couplers_imp_8RVYHO [m00_couplers_imp_8rvyho_default]
+Compiling architecture structure of entity xil_defaultlib.m01_couplers_imp_1UTB3Y5 [m01_couplers_imp_1utb3y5_default]
+Compiling architecture structure of entity xil_defaultlib.s00_couplers_imp_1RZP34U [s00_couplers_imp_1rzp34u_default]
+Compiling module axi_crossbar_v2_1_8.axi_crossbar_v2_1_8_addr_arbiter...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_carry_...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_compar...
+Compiling module axi_crossbar_v2_1_8.axi_crossbar_v2_1_8_addr_decoder...
+Compiling module axi_crossbar_v2_1_8.axi_crossbar_v2_1_8_splitter(C_N...
+Compiling module axi_crossbar_v2_1_8.axi_crossbar_v2_1_8_splitter
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module axi_register_slice_v2_1_7.axi_register_slice_v2_1_7_axic_r...
+Compiling module generic_baseblocks_v2_1_0.generic_baseblocks_v2_1_0_mux_en...
+Compiling module axi_crossbar_v2_1_8.axi_crossbar_v2_1_8_decerr_slave...
+Compiling module axi_crossbar_v2_1_8.axi_crossbar_v2_1_8_crossbar_sas...
+Compiling module axi_crossbar_v2_1_8.axi_crossbar_v2_1_8_axi_crossbar...
+Compiling module xil_defaultlib.design_1_xbar_0
+Compiling architecture structure of entity xil_defaultlib.design_1_microblaze_0_axi_periph_0 [design_1_microblaze_0_axi_periph...]
+Compiling architecture imp of entity lmb_bram_if_cntlr_v4_0_7.pselect_mask [\pselect_mask(32,"00000000000000...]
+Compiling architecture imp of entity lmb_bram_if_cntlr_v4_0_7.lmb_mux [\lmb_mux("0000000000000000000000...]
+Compiling architecture imp of entity lmb_bram_if_cntlr_v4_0_7.lmb_bram_if_cntlr [\lmb_bram_if_cntlr("virtex7","00...]
+Compiling architecture design_1_dlmb_bram_if_cntlr_0_arch of entity xil_defaultlib.design_1_dlmb_bram_if_cntlr_0 [design_1_dlmb_bram_if_cntlr_0_de...]
+Compiling architecture imp of entity lmb_v10_v3_0_7.lmb_v10 [\lmb_v10(1,32,32,1)\]
+Compiling architecture design_1_dlmb_v10_0_arch of entity xil_defaultlib.design_1_dlmb_v10_0 [design_1_dlmb_v10_0_default]
+Compiling architecture imp of entity lmb_bram_if_cntlr_v4_0_7.pselect_mask [\pselect_mask(32,"00000000000000...]
+Compiling architecture imp of entity lmb_bram_if_cntlr_v4_0_7.lmb_mux [\lmb_mux("0000000000000000000000...]
+Compiling architecture imp of entity lmb_bram_if_cntlr_v4_0_7.lmb_bram_if_cntlr [\lmb_bram_if_cntlr("virtex7","00...]
+Compiling architecture design_1_ilmb_bram_if_cntlr_0_arch of entity xil_defaultlib.design_1_ilmb_bram_if_cntlr_0 [design_1_ilmb_bram_if_cntlr_0_de...]
+Compiling architecture design_1_ilmb_v10_0_arch of entity xil_defaultlib.design_1_ilmb_v10_0 [design_1_ilmb_v10_0_default]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_output_stage [\blk_mem_gen_v8_3_1_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_softecc_output_reg_stage [\blk_mem_gen_v8_3_1_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1_mem_module [\blk_mem_gen_v8_3_1_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_1.blk_mem_gen_v8_3_1 [\blk_mem_gen_v8_3_1("blk_mem_gen...]
+Compiling architecture design_1_lmb_bram_0_arch of entity xil_defaultlib.design_1_lmb_bram_0 [design_1_lmb_bram_0_default]
+Compiling architecture structure of entity xil_defaultlib.microblaze_0_local_memory_imp_1K0VQXK [microblaze_0_local_memory_imp_1k...]
+Compiling architecture arch of entity xil_defaultlib.BCD_adder [bcd_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(32)\]
+Compiling architecture behavioral of entity xil_defaultlib.BCD32ToBinary110 [bcd32tobinary110_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCDtoBin [bcdtobin_default]
+Compiling architecture behavioral of entity xil_defaultlib.Binary110ToBCD32 [binary110tobcd32_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_power [bcd_power_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_decrement [bcd_decrement_default]
+Compiling architecture behavioral of entity xil_defaultlib.half_adder [half_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.full_adder [full_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.multiplier [multiplier_default]
+Compiling architecture behavioral of entity xil_defaultlib.BinaryToBCD [binarytobcd_default]
+Compiling architecture structural of entity xil_defaultlib.BCD_multiplier [bcd_multiplier_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_1x8_multiplier [bcd_1x8_multiplier_default]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(10)\]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(13)\]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(18)\]
+Compiling architecture structural of entity xil_defaultlib.BCD_8x8_multiplier [bcd_8x8_multiplier_default]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(8)\]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_32x8_multiplier [bcd_32x8_multiplier_default]
+Compiling architecture rtl of entity xil_defaultlib.new_divider [\new_divider(55)\]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_32x32_divider [bcd_32x32_divider_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_sqrt [bcd_sqrt_default]
+Compiling architecture behavioral of entity xil_defaultlib.p_norm [p_norm_default]
+Compiling architecture arch_imp of entity xil_defaultlib.myip_v1_0_S00_AXI [\myip_v1_0_S00_AXI(32,6)\]
+Compiling architecture arch_imp of entity xil_defaultlib.myip_v1_0 [\myip_v1_0(32,6)\]
+Compiling architecture design_1_myip_0_0_arch of entity xil_defaultlib.design_1_myip_0_0 [design_1_myip_0_0_default]
+Compiling architecture implementation of entity lib_cdc_v1_0_2.cdc_sync [\cdc_sync(1,0,1,0,2,4)\]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("1111111111111111",'0')(...]
+Compiling architecture srl16_v of entity unisim.SRL16 [\SRL16("1111111111111111")(0,15)...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_8.lpf [\lpf(4,4,'1','0')\]
+Compiling architecture imp of entity proc_sys_reset_v5_0_8.upcnt_n [\upcnt_n(6)\]
+Compiling architecture imp of entity proc_sys_reset_v5_0_8.sequence_psr [sequence_psr_default]
+Compiling architecture imp of entity proc_sys_reset_v5_0_8.proc_sys_reset [\proc_sys_reset("virtex7",4,4,'1...]
+Compiling architecture design_1_rst_clk_wiz_1_100m_0_arch of entity xil_defaultlib.design_1_rst_clk_wiz_1_100M_0 [design_1_rst_clk_wiz_1_100m_0_de...]
+Compiling architecture structure of entity xil_defaultlib.design_1 [design_1_default]
+Compiling architecture structure of entity xil_defaultlib.design_1_wrapper [design_1_wrapper_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb
+Waiting for 1 sub-compilation(s) to finish...
+Built simulation snapshot TB_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 1321.270 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Projects/HDL/xilinx/final_project/final_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TB_behav -key {Behavioral:sim_1:Functional:TB} -tclbatch {TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:01:03 . Memory (MB): peak = 1418.238 ; gain = 96.969
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+add_force {/TB/sys_diff_clock_clk_n} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+force1
+add_force {/TB/sys_diff_clock_clk_p} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+force2
+run all
+Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance TB.l1.design_1_i.clk_wiz_1.inst.mmcm_adv_inst 
+Note: Block Memory Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior.
+Time: 2175 ns  Iteration: 7  Process: /TB/l1/design_1_i/microblaze_0_local_memory/lmb_bram/U0/native_mem_map_module/mem_map_module/line__3418  File: D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.vhd
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1424.602 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
